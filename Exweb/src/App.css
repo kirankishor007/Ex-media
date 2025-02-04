@@ -1,16 +1,4 @@
 
-.bg {
-    height: 100vh; 
-    width: 100%;
-    background: url("/marvin-meyer-SYTO3xs06fU-unsplash.jpg") no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-  }
-  
 
   .content {
     background: white; 
@@ -18,6 +6,700 @@
     text-align: center;
     font-size: 1.2rem;
     color: #333;
+  } 
+
+  
+.inspirational-quote {
+  margin: 40px 0;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  position: relative;
+  border-left: 5px solid #2d3436;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.inspirational-quote:hover {
+  transform: scale(1.02);
+}
+
+.inspirational-quote blockquote {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #2d3436;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+}
+
+.inspirational-quote blockquote::before {
+  content: open-quote;
+  font-size: 4rem;
+  color: #6c757d;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  opacity: 0.3;
+}
+
+.inspirational-quote blockquote::after {
+  content: close-quote;
+  font-size: 4rem;
+  color: #6c757d;
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+  .inspirational-quote blockquote {
+    font-size: 1.4rem;
   }
   
+  .inspirational-quote blockquote::before,
+  .inspirational-quote blockquote::after {
+    font-size: 3rem;
+  }
+}
+
+
+ body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  color: #e60a50;
+  padding: 15px 20px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.navbtn{
+  color: #000;
+}
+.logo-img {
+  height: 80px;
+  width: auto;
+}
+.menu {
+  display: flex;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+.menu ul li {
+  display: inline;
+}
+.menu ul li a.nav-link {
+  color: #e60a50;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.menu ul li a.nav-link:hover {
+  color: #f39c12;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(34, 34, 34, 0.9);
+    width: 100%;
+    text-align: center;
+  }
+  .menu.open {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+.bg {
+  position: relative;
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url("/marvin-meyer-SYTO3xs06fU-unsplash.jpg") no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.bg-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.bg h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.bg-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+
+.highlight-quote {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-left: 4px solid #2d3436;
+  position: relative;
+}
+
+.highlight-quote blockquote {
+  font-size: 1.8rem;
+  color: #2d3436;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.4;
+}
+
+
+.about-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: linear-gradient(145deg, #f8fafc 0%, #ffffff 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-content::before {
+  content: "★";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  font-size: 8rem;
+  color: rgba(45, 52, 54, 0.05);
+  transform: rotate(-30deg);
+  z-index: 0;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  text-align: justify;
+  text-justify: inter-word
+  ;
+}
+
+.about-text:first-of-type {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2d3436;
+}
+@media (max-width: 768px) {
+  .about-text {
+    text-align: left; 
+    hyphens: none; 
+    text-align-last: left; 
+  }
+}
+.expertise-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  z-index: 1;
+}
+
+.expertise-list li {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-weight: 600;
+  color: #2d3436;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expertise-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #2d3436;
+  border-radius: 4px 0 0 4px;
+}
+
+.expertise-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: 2rem;
+    margin: 2rem 1rem;
+  }
   
+  .expertise-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-content {
+    padding: 4rem;
+  }
+  
+  .about-text {
+    font-size: 1.15rem;
+  }
+}
+
+.cta-button {
+  background: #e60a50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px ;
+}
+.deliverables {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.deliverables h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e60a50;
+  margin-bottom: 1.5rem;
+}
+
+.deliverables-intro {
+  font-size: 1.1rem;
+  color:#e60a50;
+  margin-bottom: 2.5rem;
+}
+
+.deliverables-slider {
+  width: 100%;
+}
+
+.deliverable-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #e31b1b;
+}
+
+.deliverable-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.deliverable-card .card-icon {
+  display: none;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.deliverable-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.deliverable-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.swiper-pagination {
+  margin-top: 2rem;
+}
+
+.swiper-pagination-bullet {
+  background: #ddd;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2d3436;
+  transform: scale(1.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background: #2d3436;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.5rem !important;
+  font-weight: 700;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #00b894;
+  transform: scale(1.1);
+}
+
+.deliverable-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem; 
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.deliverable-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+}
+.deliverable-card .card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(20%);
+}
+
+@media (min-width: 1024px) {
+  .deliverable-card {
+    width: 350px; 
+    height: 400px; 
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .deliverable-card {
+    padding: 2rem; 
+  }
+
+  .deliverable-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .deliverable-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next, .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+
+  .deliverable-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .deliverable-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .deliverables {
+    padding: 3rem 1rem;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+
+  .deliverable-card h3 {
+    font-size: 1rem;
+  }
+
+  .deliverable-card p {
+    font-size: 0.85rem;
+  }
+}
+
+
+.youtube-section {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.youtube-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.youtube-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3436;
+  margin-bottom: 1.5rem;
+}
+
+.youtube-content p {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.youtube-video {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Ensure it doesn't overflow */
+  height: 0;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  margin-bottom: 2rem; /* Spacing below the video */
+}
+
+.youtube-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.youtube-video:hover iframe {
+  transform: scale(1.05);
+}
+
+/* Channel Button Styling */
+.channel-button {
+  margin-top: 2rem;
+  padding: 12px 30px;
+  background-color: #ff5e5b;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.channel-button:hover {
+  background-color: #ff3836;
+}
+
+@media (max-width: 768px) {
+  .youtube-content h2 {
+    font-size: 2rem;
+  }
+  .youtube-content p {
+    font-size: 1rem;
+  }
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #2d3436;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+
+
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-section img {
+  width: 150px; 
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #e60a50;
+}
+
+.footer-section p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #e60a50;
+}
+
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #e60a50;
+}
+
+
+.copyright {
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
